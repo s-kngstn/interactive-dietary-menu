@@ -55,7 +55,7 @@ export const allergens: {
     key: "Celery"
   },
   {
-    name: "Fi",
+    name: "F",
     key: "Fish"
   }
 
