@@ -1,5 +1,4 @@
 import nc from 'next-connect'
-// import menu from '../../data/data'
 import hardData from '../../data/hardData'
 
 
@@ -8,6 +7,7 @@ import hardData from '../../data/hardData'
 const handler = nc()
   .get((req, res) => {
     // res.json(menu)
+    console.log(hardData)
     res.json(hardData)
   })
 
