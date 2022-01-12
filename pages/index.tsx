@@ -6,7 +6,7 @@ import { useState } from "react";
 import MenuItem from "../src/components/MenuItem";
 import Menu from "../src/components/Menu";
 import Checkbox from "../src/components/Checkbox";
-import { allergens } from "../src/data/allergens";
+import { allergens } from "../data/allergens";
 
 // TODO:
 // [] - Fix Styling (Draw out how u want it, remove all classes and start over.)
@@ -31,8 +31,8 @@ const Home: NextPage = () => {
   };
   const fetcher = (...args) =>
     fetch.apply(null, args).then((res) => res.json());
-  // const { data, error } = useSWR("http://localhost:3000/api/menu", fetcher);
-  const { data, error } = useSWR("https://interactive-dietary-menu.vercel.app/api/menu", fetcher);
+  // const { data, error } = useSWR("http://localhost:3000/api", fetcher);
+  const { data, error } = useSWR("https://interactive-dietary-menu.vercel.app/api", fetcher);
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
 

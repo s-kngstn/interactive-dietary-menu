@@ -1,5 +1,5 @@
 import nc from 'next-connect'
-import menu from '../../../src/data/data'
+import menu from '../../data/data'
 
 const handler = nc()
   .get((req, res) => {
