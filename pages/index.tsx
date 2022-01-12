@@ -80,20 +80,27 @@ const Home: NextPage = () => {
               <option value="Pesc">Pescatarian</option>
             </select>
           </div>
-          <div className={styles.checkboxContainer}>
-            <div className={styles.checkboxItems}>
+          {/* <div className={styles.checkboxContainer}> */}
+          {/* <div className={styles.checkboxItems}> */}
+          <fieldset className={styles.group}>
+            <legend>Select any of the 14 allergens</legend>
+            <ul className={styles.checkbox}>
               {allergens.map((item) => (
-                <label className={styles.checkboxLabel} key={item.key}>
-                  <Checkbox
-                    name={item.name}
-                    checked={checkedItems[item.name]}
-                    onChange={handleChange}
-                  />
-                  {item.key}
-                </label>
+                <li>
+                  <label className={styles.checkboxLabel} key={item.key}>
+                    <Checkbox
+                      name={item.name}
+                      checked={checkedItems[item.name]}
+                      onChange={handleChange}
+                    />
+                    {item.key}
+                  </label>
+                </li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </fieldset>
+          {/* </div> */}
+          {/* </div> */}
         </section>
       </Menu>
     </div>

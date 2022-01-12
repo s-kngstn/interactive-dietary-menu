@@ -15,6 +15,22 @@ export const allergens: {
     key: "Nuts",
   },
   {
+    name: "P",
+    key: "Peanuts"
+  },
+  {
+    name: "Se",
+    key: "Sesame Seeds"
+  },
+  {
+    name: "So",
+    key: "Soya"
+  },
+  {
+    name: "Su",
+    key: "Sulphur Dioxide"
+  },
+  {
     name: "E",
     key: "Eggs",
   },
@@ -37,6 +53,10 @@ export const allergens: {
   {
     name: "Ce",
     key: "Celery"
+  },
+  {
+    name: "Fi",
+    key: "Fish"
   }
 
 ];
