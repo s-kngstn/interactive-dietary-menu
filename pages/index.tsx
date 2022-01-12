@@ -31,7 +31,8 @@ const Home: NextPage = () => {
   };
   const fetcher = (...args) =>
     fetch.apply(null, args).then((res) => res.json());
-  const { data, error } = useSWR("http://localhost:3000/api/menu", fetcher);
+  // const { data, error } = useSWR("http://localhost:3000/api/menu", fetcher);
+  const { data, error } = useSWR("https://interactive-dietary-menu.vercel.app/api/menu", fetcher);
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
 
