@@ -23,7 +23,8 @@
     "pages/index.tsx",
     "src/components/Work.js",
     "src/components/MenuItem.tsx",
-    "src/components/Checkbox.js"
+    "src/components/Checkbox.js",
+    "data/hardData.js"
   ],
   "exclude": ["node_modules"]
 }
