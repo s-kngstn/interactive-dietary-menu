@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import useSWR from "swr";
 import styles from "../styles/Home.module.css";
-import { allergyFilter } from "../src/components/allergyFilterFunc";
+import { allergyFilter } from "../allergyFilterFunc";
 import { useState } from "react";
 import MenuItem from "../src/components/MenuItem";
 import Menu from "../src/components/Menu";
@@ -31,8 +31,9 @@ const Home: NextPage = () => {
   };
   const fetcher = (...args) =>
     fetch.apply(null, args).then((res) => res.json());
-  // const { data, error } = useSWR("http://localhost:3000/api", fetcher);
-  const { data, error } = useSWR("https://interactive-dietary-menu.vercel.app/api", fetcher);
+  const { data, error } = useSWR(`http://localhost:3000/api`, fetcher);
+  console.log(data)
+  // const { data, error } = useSWR("https://interactive-dietary-menu.vercel.app/api", fetcher);
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
 
@@ -87,7 +88,7 @@ const Home: NextPage = () => {
             <legend>Select any of the 14 allergens</legend>
             <ul className={styles.checkbox}>
               {allergens.map((item) => (
-                <li>
+                <li key={item.key}>
                   <label className={styles.checkboxLabel} key={item.key}>
                     <Checkbox
                       name={item.name}

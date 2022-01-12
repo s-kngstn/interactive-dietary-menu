@@ -1,4 +1,4 @@
-import { importExcelSheet } from "../src/components/importExcelSheet";
+import { importExcelSheet } from "../importExcelSheet";
 
 const fileName = "allergy_menu.xlsx";
 const excelTab = "Menu November 4th";
